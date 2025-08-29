@@ -19,7 +19,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   liveDemo,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.5)}>
       <Tilt
         glareEnable
         tiltEnable

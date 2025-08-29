@@ -7,6 +7,19 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+// Project images
+import amazon from "./amazon.png";
+import productBuilder from "./product-builder.png";
+import iphone from "./iphone.png";
+import brainwave from "./brainwave.png";
+import taskts from "./taskts.png";
+import alert from "./alert.png";
+import task from "./task.png";
+import panel from "./panel.png";
+import clean from "./clean.png";
+import kasper from "./kasper.png";
+import leon from "./leon.png";
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -81,4 +94,16 @@ export {
   carrent,
   jobit,
   tripguide,
+  // Project images
+  amazon,
+  productBuilder,
+  iphone,
+  brainwave,
+  taskts,
+  alert,
+  task,
+  panel,
+  clean,
+  kasper,
+  leon,
 };

@@ -65,7 +65,7 @@ const Contact = () => {
               Download my CV to learn more about my experience and skills.
             </p>
             <a
-              href="/Abdelrahman_Samy_Ali_Frontend_Developer_CV.pdf"
+              href="/Abdelrahman_Samy_Ali_Frontend_Developer.pdf"
               download
               className="bg-tertiary shadow-primary mt-4 inline-block rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:bg-opacity-80 transition-all duration-300"
             >

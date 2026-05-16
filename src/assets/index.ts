@@ -19,6 +19,9 @@ import panel from "./panel.png";
 import clean from "./clean.png";
 import kasper from "./kasper.png";
 import leon from "./leon.png";
+import taratil from "./taratil.png";
+import shiftsouq from "./shiftsouq.jpeg";
+import profile from "./profile.jpeg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -33,6 +36,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
 import scss from "./tech/scss.svg";
 import context from "./tech/context.svg";
 import bootstrap from "./tech/bootstrap.svg";
@@ -76,6 +80,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  nextjs,
   scss,
   context,
   bootstrap,
@@ -106,4 +111,7 @@ export {
   clean,
   kasper,
   leon,
+  taratil,
+  shiftsouq,
+  profile,
 };

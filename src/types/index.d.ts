@@ -27,6 +27,8 @@ export type TProject = {
   image: string;
   sourceCodeLink: string;
   liveDemo?: string;
+  featured?: boolean;
+  category?: "react" | "html-css" | "pwa" | "all";
 } & Required<Pick<TCommonProps, "name">>;
 
 export type TTechnology = Required<Omit<TCommonProps, "title">>;

@@ -21,7 +21,7 @@ import {
   tailwind,
   git,
   figma,
-  threejs,
+  nextjs,
   // Project images
   amazon,
   productBuilder,
@@ -34,12 +34,15 @@ import {
   clean,
   kasper,
   leon,
+  taratil,
+  shiftsouq,
 } from "../assets";
 
 // 📌 Navbar Links
 export const navLinks: TNavLink[] = [
   { id: "about", title: "About" },
   { id: "work", title: "Work" },
+  { id: "projects", title: "Projects" },
   { id: "contact", title: "Contact" },
 ];
 
@@ -60,7 +63,7 @@ const technologies: TTechnology[] = [
   { name: "React JS", icon: reactjs },
   { name: "Redux Toolkit", icon: redux },
   { name: "Tailwind CSS", icon: tailwind },
-  { name: "Three JS", icon: threejs },
+  { name: "Next JS", icon: nextjs },
   { name: "Git", icon: git },
   { name: "Figma", icon: figma },
 ];
@@ -68,24 +71,38 @@ const technologies: TTechnology[] = [
 // 📌 Experiences
 const experiences: TExperience[] = [
   {
+    title: "Frontend Developer",
+    companyName: "VClasses (LMS Platform)",
+    icon: web,
+    iconBg: "#383E56",
+    date: "Oct 2025 – Present",
+    points: [
+      "Developing and maintaining the Learning Management System (LMS) frontend using React.js.",
+      "Building responsive, performant, and accessible UI components for the educational platform.",
+      "Collaborating with cross-functional teams including backend developers and product designers.",
+      "Implementing modern frontend practices with TypeScript and component-based architecture.",
+      "Ensuring cross-browser compatibility and optimal user experience across devices.",
+    ],
+  },
+  {
     title: "Freelance Frontend Developer",
     companyName: "Self-Employed",
     icon: web,
-    iconBg: "#383E56",
-    date: "Sep 2024 – Present",
+    iconBg: "#E6DEDD",
+    date: "Sep 2024 – Oct 2025",
     points: [
-      "Develop responsive web applications using React.js and JavaScript.",
-      "Convert design mockups from Figma into functional components.",
-      "Collaborate with clients to gather requirements and deliver tailored solutions.",
-      "Write clean, maintainable code following React best practices.",
-      "Ensure cross-browser compatibility and mobile responsiveness.",
+      "Developed responsive web applications using React.js and JavaScript.",
+      "Converted design mockups from Figma into functional components.",
+      "Collaborated with clients to gather requirements and deliver tailored solutions.",
+      "Wrote clean, maintainable code following React best practices.",
+      "Ensured cross-browser compatibility and mobile responsiveness.",
     ],
   },
   {
     title: "Frontend Developer Intern",
     companyName: "Digitalize for Business Services",
     icon: web,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Mar 2024 – Aug 2024",
     points: [
       "Built web applications with React.js, JavaScript, HTML, and CSS.",
@@ -99,7 +116,7 @@ const experiences: TExperience[] = [
     title: "Digital Support Specialist",
     companyName: "Telecom Egypt (WE)",
     icon: backend,
-    iconBg: "#383E56",
+    iconBg: "#E6DEDD",
     date: "Sep 2022 – Nov 2023",
     points: [
       "Provided technical support for internet connectivity and software issues.",
@@ -110,36 +127,47 @@ const experiences: TExperience[] = [
   },
 ];
 
-// 📌 Testimonials (Dummy)
-const testimonials: TTestimonial[] = [
-  {
-    testimonial:
-      "Abdelrahman created a beautiful, responsive website for our startup that perfectly captured our brand identity. His attention to detail and technical skills are impressive.",
-    name: "Ahmed Hassan",
-    designation: "Founder",
-    company: "TechStart",
-    image: "https://randomuser.me/api/portraits/men/41.jpg",
-  },
-  {
-    testimonial:
-      "Working with Abdelrahman was a pleasure. He delivered our e-commerce site ahead of schedule with all the features we requested and added thoughtful improvements we hadn't considered.",
-    name: "Layla Ibrahim",
-    designation: "Marketing Director",
-    company: "ShopSmart",
-    image: "https://randomuser.me/api/portraits/women/25.jpg",
-  },
-  {
-    testimonial:
-      "Abdelrahman's React components are clean, well-documented, and highly reusable. His code quality and modern approach to frontend development have significantly improved our project.",
-    name: "Omar Farouk",
-    designation: "Lead Developer",
-    company: "WebSolutions",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-];
+// 📌 Testimonials (kept for potential future use)
+const testimonials: TTestimonial[] = [];
 
-// 📌 Projects (11 Project with Live Demos)
+// 📌 Project Categories for filter
+export const projectCategories = ["all", "react", "pwa", "html-css"] as const;
+
+// 📌 Projects — Featured projects first, then by technology
 const projects: TProject[] = [
+  // ⭐ Featured Projects
+  {
+    name: "Taratil — Islamic PWA",
+    description:
+      "A comprehensive Progressive Web App for Quran reading with HD pages, smart audio sync engine, daily reading tracker, premium Azkar with haptic feedback, and full offline support — all built with zero frameworks (Vanilla JS).",
+    tags: [
+      { name: "pwa", color: "blue-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+    ],
+    image: taratil,
+    sourceCodeLink: "https://github.com/abdelrahman-samy-dev/taratil-quran",
+    liveDemo: "https://taratil-quran.vercel.app/",
+    featured: true,
+    category: "pwa",
+  },
+  {
+    name: "ShiftSouq — Premium E-Commerce",
+    description:
+      "A premium fashion & lifestyle e-commerce store featuring category browsing, product pages, wishlist & cart functionality, user authentication, and a polished modern dark-themed UI.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "e-commerce", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: shiftsouq,
+    sourceCodeLink: "",
+    liveDemo: "https://shiftsouq.vercel.app/",
+    featured: true,
+    category: "react",
+  },
+
+  // React / TypeScript Projects
   {
     name: "Amazon Clone",
     description:
@@ -152,6 +180,7 @@ const projects: TProject[] = [
     image: amazon,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/amazon-clone",
     liveDemo: "https://amazon-ecommerce-clone-one.vercel.app/",
+    category: "react",
   },
   {
     name: "Advanced Product Builder",
@@ -165,6 +194,7 @@ const projects: TProject[] = [
     image: productBuilder,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/product-builder",
     liveDemo: "https://advanced-product-builder.vercel.app/",
+    category: "react",
   },
   {
     name: "iPhone 15 Showcase",
@@ -176,8 +206,10 @@ const projects: TProject[] = [
       { name: "css", color: "pink-text-gradient" },
     ],
     image: iphone,
-    sourceCodeLink: "https://github.com/abdelrahman-samy-dev/iphone15-landing-page",
+    sourceCodeLink:
+      "https://github.com/abdelrahman-samy-dev/iphone15-landing-page",
     liveDemo: "https://iphone15-landing-page-umber.vercel.app/",
+    category: "react",
   },
   {
     name: "Brainwave",
@@ -191,6 +223,7 @@ const projects: TProject[] = [
     image: brainwave,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/brainwave",
     liveDemo: "https://brainwave-xi-gray.vercel.app/",
+    category: "react",
   },
   {
     name: "TaskMasterTS",
@@ -203,6 +236,7 @@ const projects: TProject[] = [
     image: taskts,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/TaskMasterTS",
     liveDemo: "https://advanced-task-master-tsi.vercel.app/",
+    category: "react",
   },
   {
     name: "React Alert Component Library",
@@ -214,11 +248,13 @@ const projects: TProject[] = [
       { name: "scss", color: "pink-text-gradient" },
     ],
     image: alert,
-    sourceCodeLink: "https://github.com/abdelrahman-samy-dev/simple-react-alerts",
+    sourceCodeLink:
+      "https://github.com/abdelrahman-samy-dev/simple-react-alerts",
     liveDemo: "https://simple-react-alerts.vercel.app/",
+    category: "react",
   },
 
-  // --- HTML / CSS / JS projects ---
+  // HTML / CSS / JS Projects
   {
     name: "TaskFlow (Modern To-Do App)",
     description:
@@ -229,8 +265,10 @@ const projects: TProject[] = [
       { name: "javascript", color: "pink-text-gradient" },
     ],
     image: task,
-    sourceCodeLink: "https://github.com/abdelrahman-samy-dev/taskflow-modern-todo",
+    sourceCodeLink:
+      "https://github.com/abdelrahman-samy-dev/taskflow-modern-todo",
     liveDemo: "https://abdelrahman-samy-dev.github.io/taskflow-modern-todo/",
+    category: "html-css",
   },
   {
     name: "Modern Dashboard Panel",
@@ -243,6 +281,7 @@ const projects: TProject[] = [
     image: panel,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/modern-panel",
     liveDemo: "https://abdelrahman-samy-dev.github.io/modern-panel/",
+    category: "html-css",
   },
   {
     name: "HTML CSS Clean Template",
@@ -253,8 +292,11 @@ const projects: TProject[] = [
       { name: "css", color: "green-text-gradient" },
     ],
     image: clean,
-    sourceCodeLink: "https://github.com/abdelrahman-samy-dev/html-css-clean-template",
-    liveDemo: "https://abdelrahman-samy-dev.github.io/html-css-clean-template/",
+    sourceCodeLink:
+      "https://github.com/abdelrahman-samy-dev/html-css-clean-template",
+    liveDemo:
+      "https://abdelrahman-samy-dev.github.io/html-css-clean-template/",
+    category: "html-css",
   },
   {
     name: "Kasper Template",
@@ -267,6 +309,7 @@ const projects: TProject[] = [
     image: kasper,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/kasper",
     liveDemo: "https://abdelrahman-samy-dev.github.io/kasper/",
+    category: "html-css",
   },
   {
     name: "Leon Template",
@@ -279,6 +322,7 @@ const projects: TProject[] = [
     image: leon,
     sourceCodeLink: "https://github.com/abdelrahman-samy-dev/leon",
     liveDemo: "https://abdelrahman-samy-dev.github.io/leon/",
+    category: "html-css",
   },
 ];
 

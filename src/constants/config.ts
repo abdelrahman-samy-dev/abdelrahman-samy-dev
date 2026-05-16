@@ -13,6 +13,7 @@ type TConfig = {
   hero: {
     name: string;
     p: string[];
+    roles: string[];
   };
   contact: {
     form: {
@@ -40,17 +41,26 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "Abdelrahman Samy",
+    title: "Abdelrahman Samy — Frontend Developer",
     fullName: "Abdelrahman Samy Ali",
     email: "abdelrahman.samy.dev@outlook.com",
   },
   hero: {
     name: "Abdelrahman Samy",
-    p: ["I develop modern web applications", "with beautiful UI/UX experiences"],
+    p: [
+      "I build modern web experiences",
+      "with pixel-perfect attention to detail",
+    ],
+    roles: [
+      "Frontend Developer",
+      "React Specialist",
+      "UI/UX Enthusiast",
+      "TypeScript Developer",
+    ],
   },
   contact: {
     p: "Get in touch",
-    h2: "Contact.",
+    h2: "Let's Work Together.",
     form: {
       name: {
         span: "Your Name",
@@ -66,8 +76,8 @@ export const config: TConfig = {
   sections: {
     about: {
       p: "Introduction",
-      h2: "About Me",
-      content: `I'm Abdelrahman Samy, a frontend developer skilled in React, TypeScript, and modern web technologies. I build responsive, user-friendly, and high-performance web applications with clean and maintainable code. My focus is on delivering exceptional user experiences by combining strong UI/UX principles with technical expertise. I'm always eager to learn, improve, and collaborate on impactful projects that make a real difference.`,
+      h2: "About Me.",
+      content: `I'm a Frontend Developer at VClasses with hands-on experience building responsive, user-friendly web applications using React, TypeScript, and modern web technologies. I specialize in crafting high-performance UIs with clean, maintainable code and strong attention to detail. From complex LMS platforms to progressive web apps and e-commerce solutions — I turn designs into exceptional digital experiences. Always learning, always building.`,
     },
     experience: {
       p: "What I have done so far",
@@ -80,11 +90,7 @@ export const config: TConfig = {
     works: {
       p: "My work",
       h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      content: `A curated selection of projects showcasing my expertise in frontend development. From full-stack e-commerce platforms to progressive web apps and interactive UI components — each project demonstrates real-world problem-solving with modern technologies.`,
     },
   },
 };
